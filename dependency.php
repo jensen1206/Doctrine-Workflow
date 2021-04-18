@@ -5,7 +5,6 @@ require_once __DIR__ . '/vendor/autoload.php';
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\Configuration;
-use Doctrine\ORM\Tools;
 use Doctrine\ORM\EntityManagerInterface;
 
 $container = [];

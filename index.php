@@ -36,3 +36,5 @@ foreach ($findAll as $tmp) {
         $card_arr[] = $card_item;
     }
 }
+
+print_r($card_arr);
