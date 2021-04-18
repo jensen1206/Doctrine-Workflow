@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "ArtPicture\\ORM\\": "src/"
+    }
+  },
+  "require": {
+    "doctrine/orm": "2.8"
+  }
+}
