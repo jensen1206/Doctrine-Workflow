@@ -14,10 +14,10 @@ $container = require_once __DIR__ . '/dependency.php';
 $em = $container[EntityManagerInterface::class]();
 
 /** @var User $user */
-// find by ID
+// TODO find by ID
 $user = $em->find(User::class, 1);
 
-//Repository findAll
+// TODO Repository findAll
 $findAll = $em->getRepository(User::class)->findAll();
 
 $card_arr = [];
