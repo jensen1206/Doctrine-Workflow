@@ -1,8 +1,5 @@
 <?php
 
-use ArtPicture\ORM\Entity\CardProducts;
-use ArtPicture\ORM\Entity\Category;
-use ArtPicture\ORM\Entity\Product;
 use ArtPicture\ORM\Entity\User;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -13,9 +10,16 @@ $container = require_once __DIR__ . '/dependency.php';
 /** @var EntityManager $em */
 $em = $container[EntityManagerInterface::class]();
 
-/** @var User $user */
+
 // TODO find by ID
-$user = $em->find(User::class, 1);
+/** @var User $user */
+try {
+    $user = $em->find(User::class, 1);
+} catch (Exception $e) {
+    echo 'Exception abgefangen: ', $e->getMessage(), "\n";
+    die();
+}
+
 
 // TODO Repository findAll
 $findAll = $em->getRepository(User::class)->findAll();
